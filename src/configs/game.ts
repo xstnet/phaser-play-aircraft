@@ -10,7 +10,7 @@ export const defaultGameConfig: Phaser.Types.Core.GameConfig = {
     default: "arcade",
     arcade: {
       gravity: { y: 0 },
-      debug: process.env.NODE_ENV === "development2",
+      debug: process.env.NODE_ENV === "development",
     },
   },
   parent: "phaserGame",

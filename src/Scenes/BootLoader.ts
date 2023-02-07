@@ -10,14 +10,14 @@ class BootLoaderScene extends BaseScene {
     this.load.image("aircraft", "assets/aircraft.png");
     this.load.image("bullet", "assets/bullet.png");
     this.load.image("enemy", "assets/enemy_1.png");
-    this.load.spritesheet("boom", "assets/boom.png", { frameWidth: 104, frameHeight: 128 });
+    this.load.spritesheet("boom", "assets/boom.png", { frameWidth: 102, frameHeight: 126 });
     this.load.audio("boomHit", "assets/sounds/boom-hit.mp3");
     this.load.audio("bgm", "assets/sounds/bgm.mp3");
     this.load.audio("launcher", "assets/sounds/launcher.mp3");
 
-    createLoadingAnimation(this, 0.5, 0.5);
+    createLoadingAnimation(this, this.worldWidth / 2, this.worldHeight / 2);
 
-    const dom = document.querySelector("#phaserGame div")!;
+    const dom = document.querySelector("#phaserGame > div")!;
     this.load.once("start", () => {
       document.querySelector("h1")?.remove();
     });
